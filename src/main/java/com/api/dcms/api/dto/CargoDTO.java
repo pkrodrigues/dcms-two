@@ -12,6 +12,7 @@ import org.modelmapper.ModelMapper;
 @AllArgsConstructor
 public class CargoDTO {
 
+    private int idCargo;
     private String descricaoCargo;
     private String nomeCargo;
 
