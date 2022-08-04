@@ -6,6 +6,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.modelmapper.ModelMapper;
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.util.Date;
 
 @Data
@@ -27,7 +29,9 @@ public class FuncionarioDTO {
     private String rua;
     private String sexo;
     private String telefone;
+    @DateTimeFormat (pattern="dd/MM/yyyy")
     private  Date data_admissao;
+    @DateTimeFormat (pattern="dd/MM/yyyy")
     private  Date data_saida;
     private double salario;
     private String tipo_contratacao;

@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.modelmapper.ModelMapper;
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.util.Date;
 
 @Data
@@ -13,6 +15,7 @@ import java.util.Date;
 public class PacienteDTO {
     private Long idPaciente;
     private String nome;
+    @DateTimeFormat(pattern="dd/MM/yyyy")
     private Date dataNasc;
     private String rg;
     private String cpf;

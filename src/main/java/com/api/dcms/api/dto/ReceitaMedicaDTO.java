@@ -9,6 +9,7 @@ import com.api.dcms.model.entity.ReceitaMedica;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.format.annotation.DateTimeFormat;
 
 @Data
 @NoArgsConstructor
@@ -17,6 +18,7 @@ public class ReceitaMedicaDTO {
     private Long idReceitaMed;
     private Long idMedico;
     private Long idPaciente;
+    @DateTimeFormat(pattern="dd/MM/yyyy")
     private Date dtEmissaoReceita;
     private String prescricao;
 
