@@ -79,7 +79,7 @@ public class CargoController {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
     }
-    @PutMapping()
+    @PutMapping("{id}")
     @ApiOperation("Alterar detalhes do cargo")
     @ApiResponses({
             @ApiResponse(code = 201, message = "Alterações salvas com sucesso"),
@@ -98,7 +98,7 @@ public class CargoController {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
     }
-    @DeleteMapping()
+    @DeleteMapping("{id}")
     @ApiOperation("Deletar o cargo")
     @ApiResponses({
             @ApiResponse(code = 201, message = "Cargo deletado com sucesso"),
